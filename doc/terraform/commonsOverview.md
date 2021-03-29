@@ -9,4 +9,4 @@ The protected cloud environment setup by cloud-automation currently have 5 subne
 - A private subnet dedicated for k8s cluster which runs all Gen3 services. Name: private-kube.
 - A private subnet for users to run analysis. Name: private-user.
 - A redundant private subnet for future multi-az setup. Name: private_db_alt.
-- A NAT gateway that allows overpassing the proxy for logs.us-east-1.amazonaws.com requests.
+- A NAT gateway that allows overpassing the proxy for logs.us-east-2.amazonaws.com requests.

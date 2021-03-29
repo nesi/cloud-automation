@@ -88,7 +88,7 @@ variable "oidc_eks_thumbprint" {
 variable "availability_zones" {
   description = "AZ to be used by EKS nodes"
   type        = "list"
-  default     = ["us-east-1a", "us-east-1c", "us-east-1d"]
+  default     = ["us-east-2a", "us-east-2c", "us-east-2d"]
 }
 
 variable "domain_test" {
@@ -113,5 +113,5 @@ variable "single_az_for_jupyter" {
 
 variable "sns_topic_arn" {
   description = "SNS topic ARN for alerts"
-  default     = "arn:aws:sns:us-east-1:433568766270:planx-csoc-alerts-topic"
+  default     = "arn:aws:sns:us-east-2:433568766270:planx-csoc-alerts-topic"
 }

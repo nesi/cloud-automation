@@ -166,7 +166,7 @@ gen3_net_s3_access() {
 
   if [[ (! -f "$awsCacheFile") || (! -f "$s3CacheFile") ]] || (gen3_time_since ipranges_sync is 900); then
     curl -s https://ip-ranges.amazonaws.com/ip-ranges.json -o "$awsCacheFile"
-    if ! (jq -e -r '.prefixes | map(select(.service=="S3" and .region=="us-east-1"))' < "$awsCacheFile" ) > "$s3CacheFile"; then
+    if ! (jq -e -r '.prefixes | map(select(.service=="S3" and .region=="us-east-2"))' < "$awsCacheFile" ) > "$s3CacheFile"; then
       gen3_log_err "gen3_net_s3_access" "failed to refresh AWS address ranges"
       return 1
     fi

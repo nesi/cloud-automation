@@ -69,7 +69,7 @@ This variables are not initialized but you can change them if needed.
 | ami_account_id | AWS account id to use for AMI search. | string | "099720109477" |
 | image_name_search_criteria | Criteria to search among images released by the account ID specified in ami_account_id | string | "ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-2018" |
 | aws_account_id | Account ID of where the VM would be spun up. By default we use CSOC's. | string | 433568766270 |
-| aws_region | Region where the VM would be put on. | string | us-east-1 |
+| aws_region | Region where the VM would be put on. | string | us-east-2 |
 | vpc_subnet_id | Subnet within vpc_id. | string | "vpc_subnet_id" |
 | ssh_key_name | This one will most likely be overwritten, but in case something goes wrong with the execution script, you might still be able to access the VM. | string | "fauzi@uchicago.edu" |
 | environment | For tagging purposes | string | "CSOC" |

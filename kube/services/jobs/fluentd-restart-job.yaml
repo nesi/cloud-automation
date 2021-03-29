@@ -21,7 +21,7 @@ spec:
           args:
             - "-c"
             - |
-              sns_topic="arn:aws:sns:us-east-1:433568766270:planx-csoc-alerts-topic"
+              sns_topic="arn:aws:sns:us-east-2:433568766270:planx-csoc-alerts-topic"
               count=0
               restarted=0
               for i in $(kubectl get pod -n logging -o json | jq .items[].metadata.name -r);

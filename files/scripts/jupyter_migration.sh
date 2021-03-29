@@ -108,8 +108,8 @@ function createVolumesCopy()
         echo "Volume ${NEWVOL} created"
 
         echo "Creating export files"
-        #kubectl get persistentvolume --kubeconfig /home/bhcprodv2/bhcprodv2/kubeconfig-kube-aws ${PVNAME} -o yaml --export |sed -e "s/vol\-[a-z0-9]*/${NEWVOL}/g" -e "s/pvc.*/copy-${PVNAME}/g" -e "s/uid:.*//" -e "s/resourceVersion:.*//" -e "s#us-east-1[a-f]#us-east-1${AZs[$COUNTER]}#" > ${PVNAME}.yaml
-        gen3 arun kubectl --kubeconfig ${OLD_KUBECONFIG} get persistentvolume ${PVNAME} -o yaml --export |sed -e "s/vol\-[a-z0-9]*/${NEWVOL}/g" -e "s/pvc.*/copy-${PVNAME}/g" -e "s/uid:.*//" -e "s/resourceVersion:.*//" -e "s#us-east-1[a-f]#${AZs[$COUNTER]}#" > ${IMPORT_LOCATION}${PVNAME}.yaml
+        #kubectl get persistentvolume --kubeconfig /home/bhcprodv2/bhcprodv2/kubeconfig-kube-aws ${PVNAME} -o yaml --export |sed -e "s/vol\-[a-z0-9]*/${NEWVOL}/g" -e "s/pvc.*/copy-${PVNAME}/g" -e "s/uid:.*//" -e "s/resourceVersion:.*//" -e "s#us-east-2[a-f]#us-east-2${AZs[$COUNTER]}#" > ${PVNAME}.yaml
+        gen3 arun kubectl --kubeconfig ${OLD_KUBECONFIG} get persistentvolume ${PVNAME} -o yaml --export |sed -e "s/vol\-[a-z0-9]*/${NEWVOL}/g" -e "s/pvc.*/copy-${PVNAME}/g" -e "s/uid:.*//" -e "s/resourceVersion:.*//" -e "s#us-east-2[a-f]#${AZs[$COUNTER]}#" > ${IMPORT_LOCATION}${PVNAME}.yaml
         echo "Import ${IMPORT_LOCATION}${PVNAME}.yaml created"
 
         # Now let's import those newly ceated volumes into our new cluster

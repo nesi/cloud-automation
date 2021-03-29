@@ -36,7 +36,7 @@ variable "organization_name" {
 variable "availability_zones" {
   description = "AZ to be used by EKS nodes"
   type        = "list"
-  default     = ["us-east-1a", "us-east-1c", "us-east-1d"]
+  default     = ["us-east-2a", "us-east-2c", "us-east-2d"]
 }
 
 variable "squid_image_search_criteria" {

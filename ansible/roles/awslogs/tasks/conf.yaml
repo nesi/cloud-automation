@@ -12,7 +12,7 @@
 
 - name: "awslogs | ec2 instance facts collection"
   ec2_instance_facts:
-    region: "us-east-1"
+    region: "us-east-2"
     filters:
       "tag:Name": '{{ ansible_nodename }}'
   register: instance_facts

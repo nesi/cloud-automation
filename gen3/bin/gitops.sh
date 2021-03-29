@@ -99,8 +99,8 @@ gen3_run_tfplan() {
     fi
   done
 
-  sns_topic="arn:aws:sns:us-east-1:433568766270:planx-csoc-alerts-topic"
-  #sns_topic="arn:aws:sns:us-east-1:433568766270:fauzi-alert-channel"
+  sns_topic="arn:aws:sns:us-east-2:433568766270:planx-csoc-alerts-topic"
+  #sns_topic="arn:aws:sns:us-east-2:433568766270:fauzi-alert-channel"
 
 
   (

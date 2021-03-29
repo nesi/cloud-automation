@@ -1,5 +1,5 @@
 {
-    "aws_region": "us-east-1",
+    "aws_region": "us-east-2",
     "aws_instance_type": "m4.xlarge",
     "aws_access_key": "CDISTEST KEY",
     "aws_secret_key": "CDISTEST SECRET",

@@ -104,5 +104,5 @@ variable "oidc_eks_thumbprint" {
 
 variable "sns_topic_arn" {
   description = "SNS topic ARN for alerts"
-  default     = "arn:aws:sns:us-east-1:433568766270:planx-csoc-alerts-topic"
+  default     = "arn:aws:sns:us-east-2:433568766270:planx-csoc-alerts-topic"
 }

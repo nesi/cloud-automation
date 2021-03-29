@@ -160,13 +160,13 @@ Note that an `adminvm` acquires credentials to interact with the AWS API via the
 $ cat ~/.aws/config
 [default]
 output = json
-region = us-east-1
+region = us-east-2
 role_arn = arn:aws:iam::707767160287:role/csoc_adminvm
 credential_source = Ec2InstanceMetadata
 
 [profile cdistest]
 output = json
-region = us-east-1
+region = us-east-2
 role_arn = arn:aws:iam::707767160287:role/csoc_adminvm
 credential_source = Ec2InstanceMetadata
 ```

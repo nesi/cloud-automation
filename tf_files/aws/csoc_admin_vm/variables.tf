@@ -9,7 +9,7 @@ variable "csoc_account_id" {
 }
 
 variable "aws_region" {
-  default = "us-east-1"
+  default = "us-east-2"
 }
 
 variable "csoc_vpc_id" {
@@ -25,7 +25,7 @@ variable "child_account_id" {
 }
 
 variable "child_account_region" {
-  default = "us-east-1"
+  default = "us-east-2"
 }
 
 variable "child_name" {

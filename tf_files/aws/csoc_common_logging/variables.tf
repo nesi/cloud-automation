@@ -5,7 +5,7 @@ variable "csoc_account_id" {
 }
 
 variable "aws_region" {
-  default = "us-east-1"
+  default = "us-east-2"
 }
 
 variable "child_account_id" {
@@ -13,7 +13,7 @@ variable "child_account_id" {
 }
 
 variable "child_account_region" {
-  default = "us-east-1"
+  default = "us-east-2"
 }
 
 variable "common_name" {
@@ -33,7 +33,7 @@ variable "slack_webhook" {
 }
 
 variable "log_dna_function" {
-  default = "arn:aws:lambda:us-east-1:433568766270:function:logdna_cloudwatch"
+  default = "arn:aws:lambda:us-east-2:433568766270:function:logdna_cloudwatch"
 }
 
 variable "timeout" {

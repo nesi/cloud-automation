@@ -11,7 +11,7 @@ variable "vpc_octet3" {
 }
 
 variable "aws_region" {
-  default = "us-east-1"
+  default = "us-east-2"
 }
 
 variable "ssh_public_key" {}

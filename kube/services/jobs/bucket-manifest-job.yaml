@@ -1,4 +1,4 @@
-# gen3 gitops filter $HOME/cloud-automation/kube/services/jobs/bucket-manifest-job.yaml BUCKET cdistest-giangb-bucket1-databucket-gen3 JOB_QUEUE giang_batch_job_queue_name JOB_DEFINITION batch_job_definition_name SQS https://sqs.us-east-1.amazonaws.com/707767160287/terraform-example-queue OUT_BUCKET cdistest-giangb-bucket1-databucket-gen3 | sed "s|sa-#SA_NAME_PLACEHOLDER#|giangb-aws-batch-operations-account|g"
+# gen3 gitops filter $HOME/cloud-automation/kube/services/jobs/bucket-manifest-job.yaml BUCKET cdistest-giangb-bucket1-databucket-gen3 JOB_QUEUE giang_batch_job_queue_name JOB_DEFINITION batch_job_definition_name SQS https://sqs.us-east-2.amazonaws.com/707767160287/terraform-example-queue OUT_BUCKET cdistest-giangb-bucket1-databucket-gen3 | sed "s|sa-#SA_NAME_PLACEHOLDER#|giangb-aws-batch-operations-account|g"
 apiVersion: batch/v1
 kind: Job
 metadata:
@@ -22,7 +22,7 @@ spec:
         - containerPort: 80
         env:
         - name: REGION
-          GEN3_REGION|-value: "us-east-1"-|
+          GEN3_REGION|-value: "us-east-2"-|
         - name: BUCKET
           GEN3_BUCKET
         - name: JOB_QUEUE
@@ -49,7 +49,7 @@ spec:
           - |
             echo """
             [default]
-            region: us-east-1
+            region: us-east-2
             """ > /home/ubuntu/.aws/config
             if [[ "$AUTHZ" == "" ]]; then
               python batch_jobs/bin/run_bucket_manifest_job.py create_manifest --bucket $BUCKET --job_queue ${JOB_QUEUE} --job_definition ${JOB_DEFINITION} --sqs $SQS --out_bucket ${OUT_BUCKET}

@@ -91,7 +91,7 @@ token (and auto renew when it expires):
 ```
 [profile cdistest]
 output = json
-region = us-east-1
+region = us-east-2
 role_arn = arn:aws:iam::707767160287:role/csoc_adminvm
 role_session_name = gen3-reuben
 source_profile = csoc
@@ -113,7 +113,7 @@ look for `csoc` credentials in `~/.aws/credentials`.
 ```
 [profile cdistest]
 output = json
-region = us-east-1
+region = us-east-2
 role_arn = arn:aws:iam::707767160287:role/csoc_adminvm
 role_session_name = gen3-reuben
 credential_source = Ec2InsanceMetadata

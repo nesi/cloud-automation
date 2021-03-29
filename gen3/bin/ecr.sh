@@ -85,14 +85,14 @@ if ! jq -r . <<< "$policy" > /dev/null; then
   exit 1
 fi
 
-ecrReg="707767160287.dkr.ecr.us-east-1.amazonaws.com"
+ecrReg="707767160287.dkr.ecr.us-east-2.amazonaws.com"
 
 # lib -------------------------------
 
 gen3_ecr_login() {
   if gen3_time_since ecr-login is 36000; then
     # re-authenticate every 10 hours
-    aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin "707767160287.dkr.ecr.us-east-1.amazonaws.com" 1>&2 || exit 1
+    aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin "707767160287.dkr.ecr.us-east-2.amazonaws.com" 1>&2 || exit 1
   fi
 }
 

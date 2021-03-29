@@ -74,7 +74,7 @@ Example Playbook
     - import_role:
         name: slurm
       vars:
-        region: 'us-east-1'
+        region: 'us-east-2'
         slurm_source_url: 'https://github.com/SchedMD/slurm/archive/'
         slurm_version: 'slurm-20-02-3-1'
         nodejs_version: '10.x'
@@ -83,7 +83,7 @@ Example Playbook
 You can run the playbook either adding the required varibales in the playbook or though the command line
 
 ```bash
-ansible-playbook -i hosts-slurm2.yaml playbooks/slurm_cluster.yaml -e "cloudwatch_log_group=devplanetv1" -e "cluster=slurmstuff2" -e "workers_cpu=2" -e "workers_gres=40" -e "mysql_db_endpoint=slurmdemo2.cwvizkxhzjt8.us-east-1.rds.amazonaws.com" -e "mysql_db_name=something2" -e "mysql_db_pass=YourPwdShouldBeLongAndSecure" -e "mysql_db_user=user"
+ansible-playbook -i hosts-slurm2.yaml playbooks/slurm_cluster.yaml -e "cloudwatch_log_group=devplanetv1" -e "cluster=slurmstuff2" -e "workers_cpu=2" -e "workers_gres=40" -e "mysql_db_endpoint=slurmdemo2.cwvizkxhzjt8.us-east-2.rds.amazonaws.com" -e "mysql_db_name=something2" -e "mysql_db_pass=YourPwdShouldBeLongAndSecure" -e "mysql_db_user=user"
 ```
 
 License

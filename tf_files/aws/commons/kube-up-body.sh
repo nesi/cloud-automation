@@ -12,7 +12,7 @@ set -e
 if [[ -z "$GEN3_NOPROXY" ]]; then
   export http_proxy=${http_proxy:-'http://cloud-proxy.internal.io:3128'}
   export https_proxy=${https_proxy:-'http://cloud-proxy.internal.io:3128'}
-  export no_proxy=${no_proxy:-'localhost,127.0.0.1,169.254.169.254,.internal.io,logs.us-east-1.amazonaws.com'}
+  export no_proxy=${no_proxy:-'localhost,127.0.0.1,169.254.169.254,.internal.io,logs.us-east-2.amazonaws.com'}
 fi
 
 export DEBIAN_FRONTEND=noninteractive
@@ -76,7 +76,7 @@ fi
   #
   # [default]
   # output = json
-  # region = us-east-1
+  # region = us-east-2
   # role_session_name = gen3-adminvm
   # role_arn = arn:aws:iam::{ACCOUNTID}:role/csoc_adminvm
   # credential_source = Ec2InstanceMetadata

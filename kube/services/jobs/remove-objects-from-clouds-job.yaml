@@ -58,7 +58,7 @@ spec:
           - |
             echo """
             [default]
-            region: us-east-1
+            region: us-east-2
             """ > ~/.aws/config
             gcloud auth activate-service-account --key-file=/secrets/google_service_account_creds
             export GOOGLE_APPLICATION_CREDENTIALS=/secrets/google_service_account_creds

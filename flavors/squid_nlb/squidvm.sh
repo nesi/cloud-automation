@@ -70,7 +70,7 @@ sudo mkdir -p /home/ubuntu/.aws
 sudo cat <<EOT  >> /home/ubuntu/.aws/config
 [default]
 output = json
-region = us-east-1
+region = us-east-2
 role_session_name = gen3-squidnlbvm
 role_arn = arn:aws:iam::${ACCOUNT_ID}:role/${ROLE_NAME}_role
 credential_source = Ec2InstanceMetadata

@@ -17,7 +17,7 @@ spec:
               args:
               env:
                 - name: AWS_REGION
-                  value: us-east-1
+                  value: us-east-2
                 - name: AWS_PROFILE
                   value: planx
                 - name: AWS_CONFIG_FILE

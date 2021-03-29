@@ -25,7 +25,7 @@ variable "child_name" {
 }
 
 variable "child_account_region" {
-  default = "us-east-1"
+  default = "us-east-2"
 }
 
 #variable "secgroup_adminvms" {
@@ -33,7 +33,7 @@ variable "child_account_region" {
 #}
 
 variable "aws_region" {
-  default = "us-east-1"
+  default = "us-east-2"
 }
 
 variable "elasticsearch_domain" {

@@ -8,9 +8,9 @@ class BucketsParallel(object):
     """Finds total object size for all buckets"""
     def __init__(self, creds=''):
         if creds:
-          self.s3 = boto3.client('s3', region_name='us-east-1', aws_access_key_id=creds["aws_access_key_id"], aws_secret_access_key=creds["aws_secret_key"])
+          self.s3 = boto3.client('s3', region_name='us-east-2', aws_access_key_id=creds["aws_access_key_id"], aws_secret_access_key=creds["aws_secret_key"])
         else:
-          self.s3 = boto3.client('s3', region_name='us-east-1')
+          self.s3 = boto3.client('s3', region_name='us-east-2')
         self.bucket_list = dict()
 
     def add_size(self, bucket, size):
@@ -82,13 +82,13 @@ def send_email(list, total, config):
         list[key]=str(list[key])+"\n"
     SENDER = f"{config['sender']}"
     RECIPIENT = f"{config['recipient']}"
-    AWS_REGION = "us-east-1"
+    AWS_REGION = "us-east-2"
     SUBJECT = "Bucket Size Report"
     BODY_TEXT = ("Buckets with sizes:\n" f"{' '.join([key +': '+str(list[key]) for key in list.keys()])}"
                  f"Total Size: {total}"
                 )
     CHARSET = "UTF-8"
-    client = boto3.client('ses',region_name='us-east-1', aws_access_key_id=config["aws_access_key_id"], aws_secret_access_key=config["aws_secret_key"])
+    client = boto3.client('ses',region_name='us-east-2', aws_access_key_id=config["aws_access_key_id"], aws_secret_access_key=config["aws_secret_key"])
     try:
         response = client.send_email(
             Destination={

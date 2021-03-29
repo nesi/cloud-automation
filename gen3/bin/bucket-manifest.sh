@@ -70,7 +70,7 @@ EOF
   if [[ ! -z $roleToAssume ]]; then
     cat - > "$credsFile" <<EOM
 {
-  "region": "us-east-1",
+  "region": "us-east-2",
   "aws_access_key_id": "$access_key",
   "aws_secret_access_key": "$secret_key",
   "aws_session_token": "$session_token"
@@ -93,7 +93,7 @@ EOF
   else
     cat - > "$credsFile" <<EOM
 {
-  "region": "us-east-1",
+  "region": "us-east-2",
   "aws_access_key_id": "$access_key",
   "aws_secret_access_key": "$secret_key"
 }
@@ -143,17 +143,17 @@ EOF
         {
              "Effect": "Allow",
              "Action": "sqs:*",
-             "Resource": "arn:aws:sqs:us-east-1:${accountId}:${sqs_name}"
+             "Resource": "arn:aws:sqs:us-east-2:${accountId}:${sqs_name}"
         },
         {
              "Effect": "Allow",
              "Action": "batch:*",
-             "Resource": "arn:aws:batch:us-east-1:${accountId}:job-definition/${job_definition}"
+             "Resource": "arn:aws:batch:us-east-2:${accountId}:job-definition/${job_definition}"
         },
         {
              "Effect": "Allow",
              "Action": "batch:*",
-             "Resource":"arn:aws:batch:us-east-1:${accountId}:job-queue/${job_queue}"
+             "Resource":"arn:aws:batch:us-east-2:${accountId}:job-queue/${job_queue}"
         },
         {
              "Effect": "Allow",

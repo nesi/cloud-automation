@@ -21,7 +21,7 @@ mkdir -p ~/.aws
 cat - > ~/.aws/config <<EOM
 [profile jenkins]
 output = json
-region = us-east-1
+region = us-east-2
 EOM
 cat - > ~/.aws/credentials <<EOM
 [jenkins]

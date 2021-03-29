@@ -1,6 +1,6 @@
 {
   "variables": {
-    "aws_region": "us-east-1",
+    "aws_region": "us-east-2",
     "aws_instance_type": "m3.medium",
     "aws_access_key": "",
     "aws_secret_key": ""

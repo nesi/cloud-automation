@@ -13,11 +13,11 @@
 #           "Records": [{
 #              "EventSource": "aws:sns",
 #              "EventVersion": "1.0",
-#              "EventSubscriptionArn": "arn:aws:sns:us-east-1:XXX:db_disk_space_alarm-Topic:XXXXXXXXXXXXXXXXXX",
+#              "EventSubscriptionArn": "arn:aws:sns:us-east-2:XXX:db_disk_space_alarm-Topic:XXXXXXXXXXXXXXXXXX",
 #              "Sns": {
 #                "Type": "Notification",
 #                "MessageId": "[...]",
-#                "TopicArn": "arn:aws:sns:us-east-1:XXX:db_disk_space_alarm-Topic",
+#                "TopicArn": "arn:aws:sns:us-east-2:XXX:db_disk_space_alarm-Topic",
 #                 "Subject": "ALARM: \"db_disk_space_alarm\" in US East (N. Virginia)",
 #                 "Message": "{\"AlarmName\":\"db_disk_space_alarm\",\"AlarmDescription\":null,\"AWSAccountId\":\"XXX\",\"NewStateValue\":\"ALARM\",\"NewStateReason\":\"Threshold Crossed: 1 datapoint [3.22 (29/10/17 13:20:00)] was greater than the threshold (1.0).\",\"StateChangeTime\":\"2017-10-30T13:20:35.831+0000\",\"Region\":\"US East (N. Virginia)\",\"OldStateValue\":\"INSUFFICIENT_DATA\",\"Trigger\":{\"MetricName\":\"EstimatedCharges\",\"Namespace\":\"AWS/Billing\",\"StatisticType\":\"Statistic\",\"Statistic\":\"MAXIMUM\",\"Unit\":null,\"Dimensions\":[{\"name\":\"Currency\",\"value\":\"USD\"}],\"Period\":86400,\"EvaluationPeriods\":1,\"ComparisonOperator\":\"GreaterThanThreshold\",\"Threshold\":1.0,\"TreatMissingData\":\"\",\"EvaluateLowSampleCountPercentile\":\"\"}}",
 #                 "Timestamp": "[...]",

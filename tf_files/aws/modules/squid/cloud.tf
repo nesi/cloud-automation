@@ -58,7 +58,7 @@ resource "aws_ami_copy" "squid_ami" {
   name              = "ub16-squid-crypt-${var.env_vpc_name}-1.0.2"
   description       = "A copy of ubuntu16-squid-1.0.2"
   source_ami_id     = "${data.aws_ami.public_squid_ami.id}"
-  source_ami_region = "us-east-1"
+  source_ami_region = "us-east-2"
   encrypted         = true
 
   tags = {

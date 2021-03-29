@@ -21,7 +21,7 @@ spec:
         - containerPort: 80
         env:
         - name: REGION
-          GEN3_REGION|-value: "us-east-1"-|
+          GEN3_REGION|-value: "us-east-2"-|
         - name: SOURCE_BUCKET
           GEN3_SOURCE_BUCKET
         - name: DESTINATION_BUCKET

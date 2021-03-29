@@ -8,7 +8,7 @@
 ---
 - hosts: revproxy
   vars:
-    es_endpoint: search-commons-logs-lqi5sot65fryjwvgp6ipyb65my.us-east-1.es.amazonaws.com
+    es_endpoint: search-commons-logs-lqi5sot65fryjwvgp6ipyb65my.us-east-2.es.amazonaws.com
     real_ip: 35.174.124.219
     http_port: 80
     server_name: _

@@ -144,18 +144,18 @@ function configure_awscli() {
   cat <<EOT  >> ${HOME_FOLDER}/.aws/config
 [default]
 output = json
-region = us-east-1
+region = us-east-2
 
 [profile csoc]
 output = json
-region = us-east-1
+region = us-east-2
 EOT
 
   mkdir -p /root/.aws
   cat >> /root/.aws/config <<EOF
 [default]
 output = json
-region = us-east-1
+region = us-east-2
 EOF
 
   logs_helper "AWS Configured"

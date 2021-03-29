@@ -7,7 +7,7 @@
 # PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # 2   2   *   *   *    (if [ -f $HOME/cloud-automation/files/scripts/es-cronjob.sh ]; then bash $HOME/cloud-automation/files/scripts/es-cronjob.sh; else echo "no es-cronjob.sh"; fi) > $HOME/es-cronjob.log 2>&1
 
-CLUSTER_DOMAIN="search-commons-logs-lqi5sot65fryjwvgp6ipyb65my.us-east-1.es.amazonaws.com"
+CLUSTER_DOMAIN="search-commons-logs-lqi5sot65fryjwvgp6ipyb65my.us-east-2.es.amazonaws.com"
 AWS_IP_URL="https://ip-ranges.amazonaws.com/ip-ranges.json"
 declare -a SECGROUP_NAMES
 SECGROUP_NAMES=("local_es-revproxy-dev-a" "local_es-revproxy-dev-b")

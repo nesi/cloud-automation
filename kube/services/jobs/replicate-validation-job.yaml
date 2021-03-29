@@ -64,7 +64,7 @@ spec:
           - |
             echo """
             [default]
-            region: us-east-1
+            region: us-east-2
             """ > ~/.aws/config
             cat /secrets/dcf_dataservice_settings > ./scripts/settings.py
             gcloud auth activate-service-account --key-file=/secrets/google_service_account_creds

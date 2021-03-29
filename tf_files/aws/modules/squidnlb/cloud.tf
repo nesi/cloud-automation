@@ -229,7 +229,7 @@ resource "aws_autoscaling_group" "squid_nlb" {
 # and there is no need to set availability_zones.
 # (https://www.terraform.io/docs/providers/aws/r/autoscaling_group.html#availability_zones).
 
- #availability_zones = ["us-east-1a","us-east-1b","us-east-1c","us-east-1d","us-east-1e","us-east-1f"]
+ #availability_zones = ["us-east-2a","us-east-2b","us-east-2c","us-east-2d","us-east-2e","us-east-2f"]
   desired_capacity = 3
   max_size = 6
   min_size = 1

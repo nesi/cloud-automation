@@ -44,7 +44,7 @@ vpc_cidr_block="192.168.144.0/20"
 dictionary_url="https://s3.amazonaws.com/dictionary-artifacts/datadictionary/develop/schema.json"
 portal_app="dev"
 
-aws_cert_name="arn:aws:acm:us-east-1:707767160287:certificate/c676c81c-9546-4e9a-9a72-725dd3912bc8"
+aws_cert_name="arn:aws:acm:us-east-2:707767160287:certificate/c676c81c-9546-4e9a-9a72-725dd3912bc8"
 
 # This indexd guid prefix should come from Trevar/ZAC
 # indexd_prefix=ENTER_UNIQUE_GUID_PREFIX
@@ -122,7 +122,7 @@ gdcapi_indexd_password="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 | indexd_db_instance | Instance type for the indexd database | string | "db.t2.micro" |
 | hostname | Hostname that the commons will use for access | string | "dev.bionimbus.org" |
 | kube_ssh_key | A list of ssh keys that will be added to compute resources deployed by this module, including squid proxy instances | string | "" |
-| aws_region | Region in where to deploy the commons. The default is set to us-east-1, and might fail on any other region as for now. | string | "us-east-1" |
+| aws_region | Region in where to deploy the commons. The default is set to us-east-2, and might fail on any other region as for now. | string | "us-east-2" |
 | ami_account_id | Account if of AMI to use for bastion host (DEPRECATED and should no longer be used) | string | "707767160287" |
 | peering_cidr | CIDR from where you are running your gen3 command, usually where the adminVM is. | string | "10.128.0.0/20" |
 | peering_vpc_id | Peering VPC ID. Directly related to `peering_cidr`. | string | "vpc-e2b51d99" |

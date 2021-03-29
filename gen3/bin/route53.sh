@@ -67,7 +67,7 @@ EOM
 
   # From aws route53 change-resource-record-sets --generate-cli-skeleton.
   # Note: 
-  #   - the ELB hosted zone id is Z35SXDOTRQ7X7K for us-east-1 - see: https://docs.aws.amazon.com/general/latest/gr/rande.html
+  #   - the ELB hosted zone id is Z35SXDOTRQ7X7K for us-east-2 - see: https://docs.aws.amazon.com/general/latest/gr/rande.html
   #   - dualstack. is IP4/IP6 dual endpoint
   (cat - <<EOM
 {

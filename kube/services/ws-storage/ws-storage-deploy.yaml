@@ -62,7 +62,7 @@ spec:
           - containerPort: 8000
         env:
           - name: AWS_REGION
-            value: us-east-1
+            value: us-east-2
           - name: AWS_STS_REGIONAL_ENDPOINTS
             value: regional
         volumeMounts:

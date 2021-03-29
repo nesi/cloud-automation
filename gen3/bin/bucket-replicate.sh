@@ -50,7 +50,7 @@ gen3_create_aws_batch() {
   credsFile="$(gen3_secrets_folder)/g3auto/bucketreplicate/creds.json"
   cat - > "$credsFile" <<EOM
 {
-  "region": "us-east-1",
+  "region": "us-east-2",
   "aws_access_key_id": "$access_key",
   "aws_secret_access_key": "$secret_key"
 }
@@ -92,12 +92,12 @@ EOF
         {
              "Effect": "Allow",
              "Action": "batch:*",
-             "Resource": "arn:aws:batch:us-east-1:${accountId}:job-definition/${job_definition}"
+             "Resource": "arn:aws:batch:us-east-2:${accountId}:job-definition/${job_definition}"
         },
         {
              "Effect": "Allow",
              "Action": "batch:*",
-             "Resource":"arn:aws:batch:us-east-1:${accountId}:job-queue/${job_queue}"
+             "Resource":"arn:aws:batch:us-east-2:${accountId}:job-queue/${job_queue}"
         },
         {
              "Effect": "Allow",

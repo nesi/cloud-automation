@@ -33,13 +33,13 @@ sudo mkdir -p /home/ubuntu/.aws
 cat <<EOT  >> /home/ubuntu/.aws/config
 [default]
 output = json
-region = us-east-1
+region = us-east-2
 role_session_name = gen3-adminvm
 role_arn = arn:aws:iam::${ACCOUNT_ID}:role/csoc_adminvm
 credential_source = Ec2InstanceMetadata
 [profile csoc]
 output = json
-region = us-east-1
+region = us-east-2
 role_session_name = gen3-adminvm
 role_arn = arn:aws:iam::${ACCOUNT_ID}:role/csoc_adminvm
 credential_source = Ec2InstanceMetadata

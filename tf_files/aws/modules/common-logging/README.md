@@ -62,7 +62,7 @@ An example on what is received:
       "eventName": "aws:kinesis:record",
       "eventSourceARN": "arn:aws:kinesis:EXAMPLE",
       "eventSource": "aws:kinesis",
-      "awsRegion": "us-east-1"
+      "awsRegion": "us-east-2"
     }
   ]
 }
@@ -110,8 +110,8 @@ For more deep info of what comes in and how it is formatted, please checkout the
 | Name | Description | Type | Default |
 |------|-------------|:----:|:-----:|
 | csoc_account_id | Account id where resources will be deployed | string | "433568766270" |
-| child_account_region | Region for the child account | string | "us-east-1" |
-| aws_region | Regions where resources will be deployed | string | "us-east-1" |
+| child_account_region | Region for the child account | string | "us-east-2" |
+| aws_region | Regions where resources will be deployed | string | "us-east-2" |
 | elasticsearch_domain | ElasticSearch domain where logs will be sent | string | "commons-logs" |
 | threshold | Threshold for how long response time is accepted, otherwise an alert is triggered. This threshold is a value within the actual lambda function that process logs | string | "" |
 | slack_webhook | Where to send alerts | string | "" |

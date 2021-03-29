@@ -171,13 +171,13 @@ $ sudo su - newuser
 ```bash
 [default]
 output = json
-region = us-east-1
+region = us-east-2
 role_session_name = gen3-adminvm
 role_arn = arn:aws:iam::XXXXXXXXXXXX:role/csoc_adminvm
 credential_source = Ec2InstanceMetadata
 [profile account-alias]
 output = json
-region = us-east-1
+region = us-east-2
 role_session_name = gen3-adminvm
 role_arn = arn:aws:iam::XXXXXXXXXXXX:role/csoc_adminvm
 credential_source = Ec2InstanceMetadata

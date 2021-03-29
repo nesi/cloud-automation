@@ -126,7 +126,7 @@ Then create a plan and apply it.
 Outputs:
 
 output_bucket = devplanetv1-slurm-data-bucket
-rds_endpoint = slurmdemo.cwvizkxhzjt8.us-east-1.rds.amazonaws.com:3306
+rds_endpoint = slurmdemo.cwvizkxhzjt8.us-east-2.rds.amazonaws.com:3306
 rds_password = 
 rds_user = user
 ```
@@ -180,7 +180,7 @@ Then execute the playbook like this
 ```bash
 devplanetv1@cdistest_dev_admin:~/cloud-automation/ansible$ ansible-playbook -i hosts-slurm.yaml playbooks/slurm_cluster.yaml \
   -e "cloudwatch_log_group=${vpc_name}" -e "cluster=slurmstuff" -e "workers_cpu=2" -e "workers_gres=40" \
-  -e "mysql_db_endpoint=slurmdemo.cwvizkxhzjt8.us-east-1.rds.amazonaws.com" -e "mysql_db_name=bio_slurm" \
+  -e "mysql_db_endpoint=slurmdemo.cwvizkxhzjt8.us-east-2.rds.amazonaws.com" -e "mysql_db_name=bio_slurm" \
   -e "mysql_db_pass="
 ```
 

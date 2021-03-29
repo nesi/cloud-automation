@@ -90,7 +90,7 @@ metadata:
 data:
   environment: devplanetv1
   hostname: demo.planx-pla.net
-  revproxy_arn: arn:aws:acm:us-east-1:707767160287:certificate/c676c81c-9546-4e9a-9a72-725dd3912bc8
+  revproxy_arn: arn:aws:acm:us-east-2:707767160287:certificate/c676c81c-9546-4e9a-9a72-725dd3912bc8
   slack_webhook: None
 
 $ kubectl apply -f 00configmap.yaml
@@ -108,14 +108,14 @@ The `gen3` automation assumes a cluster runs a database farm of one or more post
 $ cat g3auto/dbfarm/servers.json 
 {
   "server1": {
-    "db_host": "devplanetv1-fencedb.cwvizkxhzjt8.us-east-1.rds.amazonaws.com",
+    "db_host": "devplanetv1-fencedb.cwvizkxhzjt8.us-east-2.rds.amazonaws.com",
     "db_username": "fence_user",
     "db_password": "XXXXXXX",
     "db_database": "template1",
     "farmEnabled": true
   },
   "server2": {
-    "db_host": "devplanetv1-indexddb.cwvizkxhzjt8.us-east-1.rds.amazonaws.com",
+    "db_host": "devplanetv1-indexddb.cwvizkxhzjt8.us-east-2.rds.amazonaws.com",
     "db_username": "indexd_user",
     "db_password": "XXXXXXXXX",
     "db_database": "template1",
@@ -171,13 +171,13 @@ The `creds.json` file includes database secrets for the core (legacy) gen3 servi
   },
   "ssjdispatcher": {
     "AWS": {
-      "region": "us-east-1",
+      "region": "us-east-2",
       "user_name": "test_ssjdispatcher",
       "aws_access_key_id": "XXXXXXX",
       "aws_secret_access_key": "XXXXXXXX"
     },
     "SQS": {
-      "url": "https://sqs.us-east-1.amazonaws.com/xxx/test-sqs-queue"
+      "url": "https://sqs.us-east-2.amazonaws.com/xxx/test-sqs-queue"
     },
     "JOBS": [
       {

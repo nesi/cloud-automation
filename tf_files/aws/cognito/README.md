@@ -52,7 +52,7 @@ cognito_provider_details = {"MetadataURL"="https://microsoftserver.domain.tld/fe
 |------|-------------|:----:|:-----:|
 | cognito_provider_details | Details about the auth provider, for this module most likely the MetadataURL or MetadataFILE. | map | {} |
 | vpc_name | Name most likely refered to the commons name where the cognito pool will be wired up. | string | |
-| cognito_domain_name | The name you want to use a domain prefix, usually will end up something like: https://\<cognito_domain_name\>.auth.us-east-1.amazoncognito.com | string | |
+| cognito_domain_name | The name you want to use a domain prefix, usually will end up something like: https://\<cognito_domain_name\>.auth.us-east-2.amazoncognito.com | string | |
 | cognito_callback_urls | Callback URLs that you will include in your sign in requests. | list | |
 | cognito_provider_name | Name for the provider. | string | |
 
@@ -84,7 +84,7 @@ After the resource is deployed, there are additional steps to be made in order f
 
 The `cognito_user_pool_id` and cognito domain (the full domain, not just the prefix) must be configured on the Active Directory for the full integration. You will need to contact the administrators of the Active Directory (or whatever SAML IdP you are trying to integrate with) in order to have them configure your Cognito user pool as an RP. They will need at the very least a "Relying Party Trust Identifier" (aka SAML Entity ID) and a "Relying Party SAML 2.0 SSO service URL", and possibly also SAML Claim Rules. Provide the administrators with the following, substituting variables `cognito_user_pool_id`, `cognito_domain` etc with the values from the raw output:
 
-1. Relying party trust identifier (SAML Entity ID): `urn:amazon:cognito:sp:<cognito_user_pool_id>`; this will look something like `urn:amazon:cognito:sp:us-east-1_blabla`.
+1. Relying party trust identifier (SAML Entity ID): `urn:amazon:cognito:sp:<cognito_user_pool_id>`; this will look something like `urn:amazon:cognito:sp:us-east-2_blabla`.
 1. Relying party SAML 2.0 SSO Service URL: `https://<cognito_domain>.auth.<region>.amazoncognito.com/saml2/idpresponse`
 1. SAML Claim Rules: 
     ```
@@ -101,7 +101,7 @@ Then you must configure fence on the commons side to play along with cognito:
 OPENID_CONNECT:
   cognito:
     # You must create a user pool in order to have a discovery url
-    discovery_url: 'https://cognito-idp.us-east-1.amazonaws.com/<cognito_user_pool_id>/.well-known/openid-configuration'
+    discovery_url: 'https://cognito-idp.us-east-2.amazonaws.com/<cognito_user_pool_id>/.well-known/openid-configuration'
     client_id: '<cognito_user_pool_client>'
     client_secret: '<cognito_user_pool_client_secret>'
     redirect_url: '{{BASE_URL}}/login/cognito/login/'

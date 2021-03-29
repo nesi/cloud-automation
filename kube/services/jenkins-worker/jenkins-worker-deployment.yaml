@@ -61,7 +61,7 @@ spec:
           - name: JENKINS_TUNNEL
             value: "jenkins-agent:50000"
           - name: AWS_DEFAULT_REGION
-            value: us-east-1
+            value: us-east-2
           - name: JAVA_OPTS
             value: "-Xmx3072m"
           - name: AWS_ACCESS_KEY_ID

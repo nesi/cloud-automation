@@ -75,12 +75,12 @@ source ${HOME}/.bashrc
   ubuntu@ip-172-31-40-144:~$ cat ${HOME}/.aws/config 
   [default]
   output = json
-  region = us-east-1
+  region = us-east-2
   credential_source = Ec2InstanceMetadata
 
   [profile cdistest]
   output = json
-  region = us-east-1
+  region = us-east-2
 ```
 
   It's worth noting that additional information may be required in this file but that will depend on your setup for the VM in question.
@@ -292,7 +292,7 @@ mkdir -p ${HOME}/cdis-manifest/commons-test.planx-pla.net
   "global": {
     "environment": "devplanetv1",
     "hostname": "commons-test.planx-pla.net",
-    "revproxy_arn": "arn:aws:acm:us-east-1:707767160287:certificate/c676c81c-9546-4e9a-9a72-725dd3912bc8",
+    "revproxy_arn": "arn:aws:acm:us-east-2:707767160287:certificate/c676c81c-9546-4e9a-9a72-725dd3912bc8",
     "dictionary_url": "https://s3.amazonaws.com/dictionary-artifacts/datadictionary/develop/schema.json",
     "portal_app": "dev",
     "kube_bucket": "kube-commons-test-gen3",
@@ -325,7 +325,7 @@ export GEN3_NOPROXY='no'
 if [[ -z "$GEN3_NOPROXY" ]]; then
   export http_proxy='http://cloud-proxy.internal.io:3128'
   export https_proxy='http://cloud-proxy.internal.io:3128'
-  export no_proxy='localhost,127.0.0.1,169.254.169.254,.internal.io,logs.us-east-1.amazonaws.com,kibana.planx-pla.net'
+  export no_proxy='localhost,127.0.0.1,169.254.169.254,.internal.io,logs.us-east-2.amazonaws.com,kibana.planx-pla.net'
 fi
 ```
 

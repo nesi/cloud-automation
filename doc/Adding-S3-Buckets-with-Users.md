@@ -10,7 +10,7 @@ gen3 tfapply
 
 # Old deprecated way
 
-I. Log in to the AWS console, switch to S3, and create a bucket. Quick link [https://console.aws.amazon.com/s3/home?region=us-east-1#](https://console.aws.amazon.com/s3/home?region=us-east-1#). Don't enable any properties for now, and leave the permissions as they are. We should make the bucket in the same region as the compute so we don't incur bandwidth charges for transfers between the compute & storage. Check where the compute is located with whoever created the compute.
+I. Log in to the AWS console, switch to S3, and create a bucket. Quick link [https://console.aws.amazon.com/s3/home?region=us-east-2#](https://console.aws.amazon.com/s3/home?region=us-east-2#). Don't enable any properties for now, and leave the permissions as they are. We should make the bucket in the same region as the compute so we don't incur bandwidth charges for transfers between the compute & storage. Check where the compute is located with whoever created the compute.
   
   
 

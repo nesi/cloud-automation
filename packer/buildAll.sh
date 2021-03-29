@@ -9,7 +9,7 @@ bash buildAll.sh [variableFile.json]
     ex: bash buildAll.sh ~/.gen3/secrets/packer/cdistest.json
 where cdistest.json looks like:
 {
-    "aws_region": "us-east-1",
+    "aws_region": "us-east-2",
     "aws_instance_type": "m4.xlarge",
     "aws_access_key": "YOUR KEY",
     "aws_secret_key": "YOUR SECRET"

@@ -252,13 +252,13 @@ arpolicy=<<EDOC
       "Sid": "",
       "Effect": "Allow",
       "Principal": {
-        "Federated": "arn:aws:iam::707767160287:oidc-provider/oidc.eks.us-east-1.amazonaws.com/id/7BCF89168EA2F7291A266833B57566CC"
+        "Federated": "arn:aws:iam::707767160287:oidc-provider/oidc.eks.us-east-2.amazonaws.com/id/7BCF89168EA2F7291A266833B57566CC"
       },
       "Action": "sts:AssumeRoleWithWebIdentity",
       "Condition": {
         "StringEquals": {
-          "oidc.eks.us-east-1.amazonaws.com/id/7BCF89168EA2F7291A266833B57566CC:aud": "sts.amazonaws.com",
-          "oidc.eks.us-east-1.amazonaws.com/id/7BCF89168EA2F7291A266833B57566CC:sub": "system:serviceaccount:reuben:sa_awsrole_testsuite"
+          "oidc.eks.us-east-2.amazonaws.com/id/7BCF89168EA2F7291A266833B57566CC:aud": "sts.amazonaws.com",
+          "oidc.eks.us-east-2.amazonaws.com/id/7BCF89168EA2F7291A266833B57566CC:sub": "system:serviceaccount:reuben:sa_awsrole_testsuite"
         }
       }
     }

@@ -15,7 +15,7 @@ resource "aws_security_group" "local" {
     to_port   = 0
     protocol  = "-1"
 
-    # 54.224.0.0/12 logs.us-east-1.amazonaws.com
+    # 54.224.0.0/12 logs.us-east-2.amazonaws.com
     #cidr_blocks = ["${var.vpc_cidr_block}", "54.224.0.0/12"]
     cidr_blocks = ["${var.vpc_cidr_block}"]
   }

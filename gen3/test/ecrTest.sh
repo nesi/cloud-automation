@@ -1,6 +1,6 @@
 test_ecr_registry() {
   local reg
-  reg="$(gen3 ecr registry)" && [[ "$reg" == "707767160287.dkr.ecr.us-east-1.amazonaws.com" ]]; because $? "gen3 ecr registry got expected value: $reg"
+  reg="$(gen3 ecr registry)" && [[ "$reg" == "707767160287.dkr.ecr.us-east-2.amazonaws.com" ]]; because $? "gen3 ecr registry got expected value: $reg"
 }
 
 test_ecr_login() {

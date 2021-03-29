@@ -94,7 +94,7 @@ For S3 locations:
 
 ```bash
 flowlogs_reader --location-type='s3' --include-accounts='12345678901,12345678902' bucket-name/optional-prefix - return logs only for the given accounts
-flowlogs_reader --location-type='s3' --include-regions='us-east-1,us-east-2' bucket-name/optional-prefix - return logs only for the given regions
+flowlogs_reader --location-type='s3' --include-regions='us-east-2,us-east-2' bucket-name/optional-prefix - return logs only for the given regions
 ```
 
 
@@ -141,7 +141,7 @@ By default these classes will yield records from the last hour.
 You can control what's retrieved with these parameters:
 
 start_time and end_time are Python datetime.datetime objects
-region_name is a string like 'us-east-1'. This will be used to create a boto3 Session object.
+region_name is a string like 'us-east-2'. This will be used to create a boto3 Session object.
 profile_name is a string like 'my-profile'
 boto_client_kwargs is a dictionary of parameters to pass when creating the boto3 client.
 boto_client is a boto3 client object. This takes overrides region_name, profile_name, and boto_client_kwargs
@@ -206,7 +206,7 @@ print(len(records))
 
 from flowlogs_reader import S3FlowLogsReader
 
-reader = S3FlowLogsReader('example-bucket/optional-prefix', include_regions=['us-east-1', 'us-east-2'])
+reader = S3FlowLogsReader('example-bucket/optional-prefix', include_regions=['us-east-2', 'us-east-2'])
 records = list(reader)
 print(len(records))
 You may aggregate records with the aggregate_records function. Pass in a FlowLogsReader or S3FlowLogsReader object and optionally a key_fields tuple. Python dict objects will be yielded representing the aggregated flow records. By default the typical ('srcaddr', 'dstaddr', 'srcport', 'dstport', 'protocol') will be used. The start, end, packets, and bytes items will be aggregated.

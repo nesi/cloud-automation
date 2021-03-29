@@ -15,7 +15,7 @@ resource "aws_s3_bucket" "access" {
 }
 
 locals {
-  s3_origin_id = "S3-Website-${var.access_url}.s3-website-us-east-1.amazonaws.com"
+  s3_origin_id = "S3-Website-${var.access_url}.s3-website-us-east-2.amazonaws.com"
 }
 
 resource "aws_cloudfront_distribution" "access" {

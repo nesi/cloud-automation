@@ -59,7 +59,7 @@ An example how it is received:
       "eventName": "aws:kinesis:record",
       "eventSourceARN": "arn:aws:kinesis:EXAMPLE",
       "eventSource": "aws:kinesis",
-      "awsRegion": "us-east-1"
+      "awsRegion": "us-east-2"
     }
   ]
 }

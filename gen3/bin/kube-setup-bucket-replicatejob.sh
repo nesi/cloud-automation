@@ -54,7 +54,7 @@ EOM
     cat - > "$credsFile" <<EOM
 [default]
 output = json
-region = us-east-1
+region = us-east-2
 role_session_name = default
 role_arn = $roleArn
 web_identity_token_file = /var/run/secrets/eks.amazonaws.com/serviceaccount/..data/token

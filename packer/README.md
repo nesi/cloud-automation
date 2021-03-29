@@ -14,7 +14,7 @@ Run `./getkeys.rb gituserlist`, and inspect the resulting authorized_keys.//time
 
 The newer 'ubuntu16_*' images are configured to publish public AMI's with names following the pattern *ubuntu16-NAME-1.0.0-TIMESTAMP*.
 The terraform code in the uc-cdis/cloud-automation repository looks for those images under the 'cdistest' AWS account using
-search filters like this [https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Images:visibility=public-images;search=707767160287/ubuntu*;sort=creationDate](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Images:visibility=public-images;search=707767160287/ubuntu*;sort=creationDate).  The ubuntu16_client.json and ubuntu16_squid.json packer configs similarly find the latest ubuntu16_base.json AMI with a filter like this:
+search filters like this [https://console.aws.amazon.com/ec2/v2/home?region=us-east-2#Images:visibility=public-images;search=707767160287/ubuntu*;sort=creationDate](https://console.aws.amazon.com/ec2/v2/home?region=us-east-2#Images:visibility=public-images;search=707767160287/ubuntu*;sort=creationDate).  The ubuntu16_client.json and ubuntu16_squid.json packer configs similarly find the latest ubuntu16_base.json AMI with a filter like this:
 ```
     "source_ami_filter": {
         "filters": {

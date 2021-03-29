@@ -7,7 +7,7 @@ variable "vpc_cidr_block" {
 }
 
 variable "aws_region" {
-  default = "us-east-1"
+  default = "us-east-2"
 }
 
 variable "aws_cert_name" {
@@ -143,7 +143,7 @@ variable "peering_vpc_id" {
 }
 
 variable "squid-nlb-endpointservice-name" {
-  default = "com.amazonaws.vpce.us-east-1.vpce-svc-0ce2261f708539011"
+  default = "com.amazonaws.vpce.us-east-2.vpce-svc-0ce2261f708539011"
   }
 
 # Path to user.yaml in s3://cdis-gen3-users/CONFIG_FOLDER/user.yaml

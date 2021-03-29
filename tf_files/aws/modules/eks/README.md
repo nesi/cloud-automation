@@ -59,7 +59,7 @@ users_policy = "test-commons"
 | instance_type | For k8s workers | string | t3.large |
 | peering_cidr | CIDR were your adminVM belongs to. | string | 10.128.0.0/20 |
 | eks_version | Version for EKS cluster | string | 1.14 |
-| availability_zones | AZs where to deploy the kubernetes worker nodes. Could be automated. | list |  ["us-east-1a","us-east-1d","us-east-1d"] |
+| availability_zones | AZs where to deploy the kubernetes worker nodes. Could be automated. | list |  ["us-east-2a","us-east-2d","us-east-2d"] |
 | worker_drive_size | Volume size for the k8s workers | string | 30GB |
 | jupyter_instance_type | For k8s jupyter workers | string | t3.medium |
 | bootstrap_script | Script to initialize the workers | string | [bootstrap.sh](https://github.com/uc-cdis/cloud-automation/tree/master/flavors/eks) |
@@ -76,7 +76,7 @@ users_policy = "test-commons"
 | domain_test | If ha-proxy a domain to check internet access | string | gen3.io |
 | ha_squid | If enabled, this should be set to true | boolean | false |
 | dual_proxy | If migrating from single to ha, set to true, should not disrrupt connectivity | boolean | false |
-| sns_topic_arn | SNS topic ARN for alerts | string | "arn:aws:sns:us-east-1:433568766270:planx-csoc-alerts-topic" |
+| sns_topic_arn | SNS topic ARN for alerts | string | "arn:aws:sns:us-east-2:433568766270:planx-csoc-alerts-topic" |
 
 
 ## 5. Outputs

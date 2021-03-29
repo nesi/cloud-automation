@@ -40,17 +40,17 @@ gen3_replicate_create_job() {
   local MANIFEST='{"Spec": {"Format": "S3BatchOperations_CSV_20180820","Fields": ["Bucket","Key"]},"Location": {"ObjectArn": "arn:aws:s3:::'$destinationBucket'/manifest.csv","ETag": "'$etag'"}}'
   local REPORT='{"Bucket": "arn:aws:s3:::'$destinationBucket'","Format": "Report_CSV_20180820","Enabled": true,"Prefix": "reports/copy-with-replace-metadata","ReportScope": "AllTasks"}'
   local roleArn=$(aws iam get-role --profile $profileWithRole --role-name batch-operations-role | jq -r .Role.Arn)
-  status=$(aws s3control create-job --profile $profileWithRole --account-id $roleAccountId --manifest "${MANIFEST//$'\n'}" --operation "${OPERATION//$'\n'/}" --report "${REPORT//$'\n'}" --priority 10 --role-arn $roleArn  --region us-east-1 --description "Copy with Replace Metadata" --no-confirmation-required | jq -r .JobId)
+  status=$(aws s3control create-job --profile $profileWithRole --account-id $roleAccountId --manifest "${MANIFEST//$'\n'}" --operation "${OPERATION//$'\n'/}" --report "${REPORT//$'\n'}" --priority 10 --role-arn $roleArn  --region us-east-2 --description "Copy with Replace Metadata" --no-confirmation-required | jq -r .JobId)
   echo $status
 }
 
 # function to check job status
 gen3_replicate_status() {
   local jobId=$1
-  local status=$(aws s3control describe-job --account-id $roleAccountId --job-id $jobId --profile $profileWithRole --region us-east-1 | jq -r .Job.Status)
+  local status=$(aws s3control describe-job --account-id $roleAccountId --job-id $jobId --profile $profileWithRole --region us-east-2 | jq -r .Job.Status)
   while [[ $status != 'Complete' ]]; do
     gen3_log_info "Waiting for job to complete. Current status $status"
-    local status=$(aws s3control describe-job --account-id $roleAccountId --job-id $jobId --profile $profileWithRole --region us-east-1 | jq -r .Job.Status)
+    local status=$(aws s3control describe-job --account-id $roleAccountId --job-id $jobId --profile $profileWithRole --region us-east-2 | jq -r .Job.Status)
     sleep 10
     if [[ $status == "Failed" ]]; then
       gen3_log_err "Job has failed. Check the logs in the s3 console."

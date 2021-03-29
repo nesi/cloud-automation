@@ -57,7 +57,7 @@ gen3_aws_run() {
         #
         # [profile cdistest]
         # output = json
-        # region = us-east-1
+        # region = us-east-2
         # role_arn = arn:aws:iam::707767160287:role/csoc_adminvm
         # role_session_name = gen3-reuben
         # source_profile = csoc
@@ -67,7 +67,7 @@ gen3_aws_run() {
         #
         # [profile cdistest]
         # output = json
-        # region = us-east-1
+        # region = us-east-2
         # role_arn = arn:aws:iam::707767160287:role/csoc_adminvm
         # role_session_name = gen3-reuben
         # credential_source = Ec2InstanceMetadata
@@ -107,7 +107,7 @@ gen3_workon_aws(){
   export GEN3_FLAVOR=AWS
   export GEN3_WORKDIR="$XDG_DATA_HOME/gen3/${GEN3_PROFILE}/${GEN3_WORKSPACE}"
   export AWS_PROFILE="$GEN3_PROFILE"
-  export AWS_DEFAULT_REGION=$(aws configure get "${AWS_PROFILE}.region" || echo us-east-1)
+  export AWS_DEFAULT_REGION=$(aws configure get "${AWS_PROFILE}.region" || echo us-east-2)
   export AWS_ACCOUNT_ID=$(gen3_aws_run aws sts get-caller-identity | jq -r .Account)
 
   # S3 bucket where we save terraform state, etc
@@ -195,7 +195,7 @@ gen3_AWS.backend.tfvars() {
 bucket = "$GEN3_S3_BUCKET"
 encrypt = "true"
 key = "$GEN3_WORKSPACE/terraform.tfstate"
-region = "${AWS_DEFAULT_REGION:-us-east-1}"
+region = "${AWS_DEFAULT_REGION:-us-east-2}"
 EOM
 }
 
